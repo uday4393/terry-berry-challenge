@@ -13,11 +13,13 @@ npm start
 ```
 Navigate to `http://localhost:4200/`, App will automatically reload if you change any of the source files.
 
-## Demo/Screenshots of the App
+## Demo
+![alt text](https://github.com/uday4393/terry-berry-challenge/blob/master/screens/terryberrydemo.gif?raw=true)
+
+## Screenshots 
 ![alt text](https://github.com/uday4393/terry-berry-challenge/blob/master/screens/terryberry1.png?raw=true)
 ![alt text](https://github.com/uday4393/terry-berry-challenge/blob/master/screens/terryberry2.png?raw=true)
 ![alt text](https://github.com/uday4393/terry-berry-challenge/blob/master/screens/terryberry3.png?raw=true)
-![alt text](https://github.com/uday4393/terry-berry-challenge/blob/master/screens/terryberrydemo.gif?raw=true)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
