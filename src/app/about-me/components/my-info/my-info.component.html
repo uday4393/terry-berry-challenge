@@ -1,0 +1,104 @@
+<mat-tab-group class="mat-tab-group" [(selectedIndex)]="tabIndex">
+  <mat-tab label="My Information">
+    <mat-card class="mat-card" *ngIf="isMyInformationLoaded()">
+      <div class="flex">
+        <mat-card-subtitle>Name</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.name}}</mat-card-content>
+      </div>
+
+      <div class="flex">
+        <mat-card-subtitle>Hobbies</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.hobbies.toString() || ''}}</mat-card-content>
+      </div>
+      <div class="flex">
+        <mat-card-subtitle>Description</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.description}}</mat-card-content>
+      </div>
+      <div class="flex">
+        <mat-card-subtitle>Experience</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.professionalExperience}}</mat-card-content>
+      </div>
+      <div class="flex">
+        <mat-card-subtitle>Email</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.email}}</mat-card-content>
+      </div>
+      <div class="flex">
+        <mat-card-subtitle>Mobile</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.mobile}}</mat-card-content>
+      </div>
+      <div class="flex">
+        <mat-card-subtitle>Skills</mat-card-subtitle>
+        <mat-card-content>{{myInformationForm.value.skills.toString() || ''}}</mat-card-content>
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Edit Information">
+    <mat-card class="mat-form-group-card" *ngIf="isMyInformationLoaded()">
+      <form class="mat-form" [formGroup]="myInformationForm" (submit)="saveMyInfo()">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name">
+        </mat-form-field>
+
+        <div *ngIf="myInformationForm.invalid && (myInformationForm.dirty || myInformationForm.touched)"
+          class="warning-text-wrapper">
+          <small *ngIf="myInformationForm.get('name')?.errors?.required" class="warning-text">
+            Name is required.
+          </small>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Hobbies</mat-label>
+          <textarea matInput formControlName="hobbies"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Experience</mat-label>
+          <input matInput type="number" formControlName="professionalExperience">
+        </mat-form-field>
+        <div *ngIf="myInformationForm.invalid && (myInformationForm.dirty || myInformationForm.touched)"
+          class="warning-text-wrapper">
+          <small *ngIf="myInformationForm.get('professionalExperience')?.errors?.min" class="warning-text">
+            Professional Experience cannot be less than zero.
+          </small>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput type="email" formControlName="email">
+        </mat-form-field>
+        <div *ngIf="myInformationForm.invalid && (myInformationForm.dirty || myInformationForm.touched)"
+          class="warning-text-wrapper">
+          <small *ngIf="myInformationForm.get('email')?.errors?.email" class="warning-text">
+            Invalid Email format.
+          </small>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Mobile</mat-label>
+          <input matInput type="tel" formControlName="mobile">
+        </mat-form-field>
+
+        <div *ngIf="myInformationForm.invalid && (myInformationForm.dirty || myInformationForm.touched)"
+          class="warning-text-wrapper">
+          <small *ngIf="myInformationForm.get('mobile')?.errors?.pattern" class="warning-text">
+            Invalid Mobile format.
+          </small>
+        </div>
+
+        <mat-form-field>
+          <mat-label>Skills</mat-label>
+          <textarea matInput formControlName="skills"></textarea>
+        </mat-form-field>
+
+        <button [disabled]="myInformationForm.invalid || !myInformationForm.dirty" mat-raised-button color="primary"
+          type="submit">Save</button>
+      </form>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>

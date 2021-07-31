@@ -1,0 +1,47 @@
+<mat-card class="welcome-card">
+  <mat-card-title>Welcome - Terry Berry Coding Challenge</mat-card-title>
+
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem">
+        <mat-icon class="mat-icon">verified</mat-icon>
+        <span class="item-description">
+          Created Angular Application from Scratch and Added New Module <strong>AboutMe</strong>, which is lazyloaded as well.
+        </span>
+      </mat-list-item>
+
+      <mat-list-item role="listitem">
+        <mat-icon class="mat-icon">verified</mat-icon>
+        <span class="item-description">
+          Components include <strong>MyInfo</strong> in <strong>AboutMe</strong> Module, which is loaded in route <strong>/AboutMe/MyInfo</strong>
+        </span>
+      </mat-list-item>
+
+      <mat-list-item role="listitem">
+        <mat-icon class="mat-icon">verified</mat-icon>
+        <span class="item-description">
+          The components <strong>Welcome</strong>, <strong>Header</strong>, <strong>Sidenavbar</strong> are embedded in core module. <strong>MaterialModule</strong> is used for all material CSS related components like <strong>MatCard</strong>, <strong>MatTab</strong> etc..,
+        </span>
+      </mat-list-item>
+
+      <mat-list-item role="listitem">
+        <mat-icon class="mat-icon">verified</mat-icon>
+        <span class="item-description">
+          Services live under the folder with same name, created a Service called <strong>MyInfo.service</strong> inside a <strong>services/repositories</strong> folder.<br>
+          Faked the api for pulling information with <strong>InMemoryData</strong> service. Created a Loader service as well to display loader.
+        </span>
+      </mat-list-item>
+
+      <mat-list-item role="listitem">
+        <mat-icon class="mat-icon">verified</mat-icon>
+        <span class="item-description">
+          <strong>My Information</strong> tab shows fetched info from fake api in a Material Card.
+          Created a <strong>Form Group Material Card</strong> that holds the information which can be edited and saved but wont persist if we refresh as we are using a fake api.
+          <br> Basic Validation has been implemented in the forms as well. Used Toaster Messages for User Feedback.
+        </span>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-card-content>
+
+</mat-card>

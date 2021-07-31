@@ -1,0 +1,44 @@
+.mat-card {
+  margin: 10px 20px;
+}
+
+.mat-form-group-card {
+  margin: 20px auto;
+  .mat-form {
+    mat-form-field {
+      display: block;
+    }
+    .warning-text-wrapper {
+      margin-bottom: 20px;
+      .warning-text {
+        color: #f44336;
+      }
+    }
+  }
+}
+
+.mat-tab-group{
+  margin: 100px 0 20px;
+}
+
+.flex{
+  display: flex;
+  mat-card-content{
+    margin: 10px;
+    width: 85%;
+  }
+  mat-card-subtitle{
+    margin: 10px;
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mat-card {
+    margin: 80px 20px 20px;
+  }
+  .mat-form-group-card {
+    margin: 20px;
+  }
+}
+

@@ -1,0 +1,19 @@
+.welcome-card {
+  margin: 100px 0 20px;
+  .mat-list-item {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .mat-icon{
+    color: green;
+  }
+  .item-description {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .welcome-card {
+    margin: 100px 20px 20px;
+  }
+}

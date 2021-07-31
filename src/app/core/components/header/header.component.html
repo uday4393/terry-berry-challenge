@@ -1,0 +1,18 @@
+<mat-toolbar class="nav-toolbar">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="toggleSideNav.emit();">
+      <mat-icon class="menu-icon">menu</mat-icon>
+    </button>
+  </div>
+
+  <div fxHide.xs>
+    <ul fxLayout="row"  class="nav-items">
+      <li class="list-item" routerLink="/welcome" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a class="nav-link" >Welcome</a>
+      </li>
+      <li class="list-item" routerLink="/about-me/my-info" routerLinkActive="active">
+        <a class="nav-link" >My Information</a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>
